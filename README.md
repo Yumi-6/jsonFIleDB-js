@@ -36,6 +36,13 @@ let result = users.insert({
     nome:"yumi"
 });
 ```
+Actualizar registro
+``` js
+users.where("id" , "=" , 1).update({
+    nome:"jony",
+    idade:18
+});
+```
 
 exemplo completo
 
@@ -53,4 +60,17 @@ let result = users.insert({
 
 let result = users.where("id" , "=" , 1).get();
 console.log(result);
+```
+exemplo de atualização completo
+
+``` js
+import storege from "./src/core/storege.js";
+
+let users = new storege();
+users.collection("users");
+
+users.where("id" , "=" , 1).update({
+    nome:"jony",
+    idade:18
+});
 ```

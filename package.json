@@ -1,0 +1,20 @@
+{
+  "name": "jsonfiledb",
+  "version": "1.0.0",
+  "description": "node databse ",
+  "homepage": "https://github.com/Yumi-6/jsonFIleDB-js#readme",
+  "bugs": {
+    "url": "https://github.com/Yumi-6/jsonFIleDB-js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yumi-6/jsonFIleDB-js.git"
+  },
+  "license": "ISC",
+  "author": "Yumi",
+  "type": "module",
+  "main": "storege.js",
+  "scripts": {
+    "test": "node index.js"
+  }
+}
