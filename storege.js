@@ -4,6 +4,7 @@ export default class storege {
     async collection(name){
         this.name = name;
         this.filters = [];
+        this.limiter = null;
 
         if (!fs.existsSync("database")) {
             fs.mkdirSync("database");
@@ -30,6 +31,10 @@ export default class storege {
         });
         return this;
     }
+    limit(value){
+        this.limiter = value;
+        return this;
+    }
     get (){
         let result = this.data;
         for (const filter of this.filters) {
@@ -48,6 +53,9 @@ export default class storege {
                 }
                 return false;
             });
+        }
+        if (this.limiter !== null) {
+            return result.slice(0 , this.limiter);
         }
         return result;
     }

@@ -23,6 +23,11 @@ consulta com filtro
 ``` js
 let result = users.where("id" , "=" , 1).get();
 ```
+consulta com limite
+
+``` js
+let result = users.limit(3).get();
+```
 
 remover registro
 ``` js
