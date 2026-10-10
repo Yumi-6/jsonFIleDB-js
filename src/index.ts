@@ -1,0 +1,1 @@
+import { Storege } from "./storage";
